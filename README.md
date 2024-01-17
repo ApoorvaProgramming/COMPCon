@@ -1,3 +1,13 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Filled:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Filled:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<h2><span class="material-symbols-filled">
+construction
+</span>
+The Project is in Construction process.<span class="material-symbols-filled">
+build
+</span></h2>
 # COMPCon
 
 COMPCon is a complex console application designed to streamline various tasks in a terminal environment. It provides functionality similar to the Windows Command Prompt and PowerShell. Whether you are executing commands, leveraging auto-correction for typos, or extending its capabilities through custom plugins, COMPCon is built to enhance your console experience.
