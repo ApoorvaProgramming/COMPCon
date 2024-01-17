@@ -1,11 +1,10 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Filled:opsz,wght,FILL,GRAD@24,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Filled:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
 
-<h2><span class="material-symbols-filled">
+<h2><span class="material-symbols-outlined">
 construction
 </span>
-The Project is in Construction process.<span class="material-symbols-filled">
+The Project is in Construction process.<span class="material-symbols-outlined">
 build
 </span></h2>
 # COMPCon
