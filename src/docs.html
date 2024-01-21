@@ -61,9 +61,10 @@
     <!-- Firestore and JavaScript -->
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
-    <script type="module">
+    <script type="module" src="./db.js"></script>
+    <script type="module" >
         // Import Firestore and JavaScript
-        import db from './path/to/db.js';
+        import db from './db.js';
 
         // Fetch and render sidebar items
         const sidebarList = document.getElementById('sidebarList');
