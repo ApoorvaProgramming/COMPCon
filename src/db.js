@@ -1,5 +1,7 @@
-// db.js
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js';
+import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js';
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyB11Qts3HJvtkg0vLK1M4JBGF0M-Uy1MW8",
     authDomain: "compcondocs.firebaseapp.com",
@@ -10,25 +12,8 @@ const firebaseConfig = {
     measurementId: "G-E17KLYBKNH"
 };
 
-firebase.initializeApp(firebaseConfig);
-const firestore = firebase.firestore();
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
+const db = getFirestore(firebaseApp);
 
-const db = {
-  getDocumentation: async (path) => {
-    const docRef = firestore.collection('docs').where('path', '==', path);
-    const docSnapshot = await docRef.get();
-
-    if (docSnapshot.empty) {
-      return null;
-    }
-
-    return docSnapshot.docs[0].data();
-  },
-
-  getSidebar: async () => {
-    const sidebarRef = firestore.collection('docs').select('path');
-    const sidebarSnapshot = await sidebarRef.get();
-
-    return sidebarSnapshot.docs.map((doc) => doc.data().path);
-  },
-};
+export default db;
