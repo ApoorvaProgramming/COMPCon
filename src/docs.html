@@ -1,70 +1,95 @@
-<!-- docs.html -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Documentation Viewer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <!-- Include Bootstrap, Bulma, and TailwindCSS styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <!-- Add additional custom styles -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Sidebar styles */
+        #sidebar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        #content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        /* Document styles */
+        #docTitle {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #docContent {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Documentation Viewer</h1>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <h2>Documentation</h2>
+        <ul id="sidebarList"></ul>
+    </div>
 
-  <!-- Sidebar for navigation -->
-  <div id="sidebar-container"></div>
+    <!-- Content -->
+    <div id="content">
+        <h1 id="docTitle"></h1>
+        <div id="docContent"></div>
+        <p>Author: <span id="docAuthor"></span></p>
+        <p>Path: <span id="docPath"></span></p>
+    </div>
 
-  <!-- Placeholder for displaying documentation -->
-  <div id="documentation-container"></div>
+    <!-- Firestore and JavaScript -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+    <script type="module">
+        // Import Firestore and JavaScript
+        import db from './path/to/db.js';
 
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-  <script src="db.js"></script>
-  <script>
-    // Function to fetch and display documentation
-    async function fetchDocumentation(path) {
-      try {
-        const doc = await db.getDocumentation(path);
+        // Fetch and render sidebar items
+        const sidebarList = document.getElementById('sidebarList');
 
-        if (!doc) {
-          console.error('Documentation not found');
-          return;
+        db.collection('docs').get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                const li = document.createElement('li');
+                li.innerHTML = `<a href="#" onclick="fetchDocument('${doc.id}')">${doc.data().title}</a>`;
+                sidebarList.appendChild(li);
+            });
+        });
+
+        // Function to fetch and render document content
+        function fetchDocument(docId) {
+            db.collection('docs').doc(docId).get().then((doc) => {
+                const titleElement = document.getElementById('docTitle');
+                const contentElement = document.getElementById('docContent');
+                const authorElement = document.getElementById('docAuthor');
+                const pathElement = document.getElementById('docPath');
+
+                titleElement.innerText = doc.data().title;
+                contentElement.innerHTML = doc.data().content;
+                authorElement.innerText = doc.data().author;
+                pathElement.innerText = doc.data().path;
+            });
         }
-
-        // Display the documentation in a container
-        const container = document.getElementById('documentation-container');
-        container.innerHTML = `
-          <h2>${doc.title}</h2>
-          <p>${doc.content}</p>
-          <p>Author: ${doc.author}</p>
-        `;
-      } catch (error) {
-        console.error('Error fetching documentation:', error);
-      }
-    }
-
-    // Function to render the sidebar
-    async function renderSidebar() {
-      try {
-        const sidebar = await db.getSidebar();
-
-        // Display the sidebar in a container
-        const sidebarContainer = document.getElementById('sidebar-container');
-        sidebarContainer.innerHTML = `
-          <ul>
-            ${sidebar.map((path) => `<li><a href="#" onclick="fetchDocumentation('${path}')">${path}</a></li>`).join('')}
-          </ul>
-        `;
-      } catch (error) {
-        console.error('Error fetching sidebar:', error);
-      }
-    }
-
-    // Fetch and display the sidebar when the page loads
-    window.onload = () => {
-      renderSidebar();
-    };
-  </script>
-
+    </script>
 </body>
 </html>
