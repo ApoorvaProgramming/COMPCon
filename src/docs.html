@@ -14,57 +14,112 @@
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 
-    <!-- Your custom styles or additional stylesheets -->
-    <link rel="stylesheet" href="path-to-your-custom-styles.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        nav.navbar {
+            background-color: #007bff;
+        }
+
+        nav.navbar a {
+            color: white !important;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">COMPCon</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#getting-started">Getting Started <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#installation">Installation</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#usage">Usage</a>
-                </li>
-                <!-- Add more sections as needed -->
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">COMPCon</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#getting-started">Getting Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#installation">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#usage">Usage</a>
+                    </li>
+                    <!-- Add more sections as needed -->
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Getting Started Section -->
     <section id="getting-started">
-        <h2>Getting Started</h2>
-        <p>Welcome to the COMPCon documentation! Here's how you can get started...</p>
-        <!-- Add content for getting started section -->
+        <div class="container">
+            <h2>Getting Started</h2>
+            <div class="card">
+                <p>Welcome to the COMPCon documentation! Here's how you can get started...</p>
+                <!-- Add content for getting started section -->
+            </div>
+        </div>
     </section>
 
     <!-- Installation Section -->
     <section id="installation">
-        <h2>Installation</h2>
-        <p>Follow these steps to install COMPCon...</p>
-        <!-- Add content for installation section -->
+        <div class="container">
+            <h2>Installation</h2>
+            <div class="card">
+                <p>Follow these steps to install COMPCon...</p>
+                <!-- Add content for installation section -->
+            </div>
+        </div>
     </section>
 
     <!-- Usage Section -->
     <section id="usage">
-        <h2>Usage</h2>
-        <p>Learn how to use COMPCon with these instructions...</p>
-        <!-- Add content for usage section -->
+        <div class="container">
+            <h2>Usage</h2>
+            <div class="card">
+                <p>Learn how to use COMPCon with these instructions...</p>
+                <!-- Add content for usage section -->
+            </div>
+        </div>
     </section>
 
     <!-- Add more sections as needed -->
 
-    <!-- Scripts and Bootstrap JS (if needed) -->
+    <!-- Bootstrap JS (if needed) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Your custom scripts -->
