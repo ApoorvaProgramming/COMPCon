@@ -17,112 +17,159 @@
     <!-- Custom Styles -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #343a40;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #282c34;
+            color: #abb2bf;
         }
 
         nav.navbar {
-            background-color: #007bff;
+            background-color: #282c34;
+            border-bottom: 1px solid #444;
         }
 
         nav.navbar a {
-            color: white !important;
+            color: #61dafb !important;
         }
 
-        section {
-            padding: 80px 0;
-        }
-
-        h2 {
-            color: #007bff;
-        }
-
-        .card {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
+        .sidebar {
+            background-color: #333;
             color: white;
-            border-radius: 8px;
-            font-weight: bold;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
         }
 
-        .btn-primary:hover {
-            background-color: #0056b3;
+        .sidebar a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        .terminal {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .terminal-code {
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">COMPCon</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#getting-started">Getting Started</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#installation">Installation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#usage">Usage</a>
-                    </li>
-                    <!-- Add more sections as needed -->
-                </ul>
-            </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">COMPCon Docs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#getting-started">Getting Started</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#installation">Installation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#usage">Usage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#code-example">Code Example</a>
+                </li>
+                <!-- Add more links for additional sections -->
+            </ul>
         </div>
     </nav>
 
-    <!-- Getting Started Section -->
-    <section id="getting-started">
-        <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#getting-started">Getting Started</a>
+        <a href="#installation">Installation</a>
+        <a href="#usage">Usage</a>
+        <a href="#features">Features</a>
+        <a href="#code-example">Code Example</a>
+        <!-- Add more links for additional sections -->
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Getting Started Section -->
+        <section id="getting-started">
             <h2>Getting Started</h2>
-            <div class="card">
-                <p>Welcome to the COMPCon documentation! Here's how you can get started...</p>
-                <!-- Add content for getting started section -->
-            </div>
-        </div>
-    </section>
+            <p>Introduction to COMPCon and how to get started.</p>
+        </section>
 
-    <!-- Installation Section -->
-    <section id="installation">
-        <div class="container">
+        <!-- Installation Section -->
+        <section id="installation">
             <h2>Installation</h2>
-            <div class="card">
-                <p>Follow these steps to install COMPCon...</p>
-                <!-- Add content for installation section -->
-            </div>
-        </div>
-    </section>
+            <p>Steps to install COMPCon on your system.</p>
+        </section>
 
-    <!-- Usage Section -->
-    <section id="usage">
-        <div class="container">
+        <!-- Usage Section -->
+        <section id="usage">
             <h2>Usage</h2>
-            <div class="card">
-                <p>Learn how to use COMPCon with these instructions...</p>
-                <!-- Add content for usage section -->
+            <p>Instructions on how to use COMPCon for various tasks.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features">
+            <h2>Features</h2>
+            <p>Highlighting key features of COMPCon.</p>
+        </section>
+
+        <!-- Code Example Section -->
+        <section id="code-example">
+            <h2>Code Example</h2>
+            <div class="terminal">
+                <pre class="terminal-code">$ compcon&gt; <span class="text-red-500">compcon1</span>
+Did you mean: <strong class="text-green-400">compcon</strong></pre>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Add more sections as needed -->
+        <!-- Additional Sections -->
+        <!-- Add more sections as needed -->
 
-    <!-- Bootstrap JS (if needed) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
 
-    <!-- Your custom scripts -->
+    <!-- Scripts -->
+    <script>
+        // Add smooth scrolling to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS (for toggling navigation) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>
