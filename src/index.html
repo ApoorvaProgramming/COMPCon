@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPCon - Console Application</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css">
+    <!-- Add additional custom styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #333;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Hero Section styles */
+        section.hero {
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        section.hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        section.hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Key Features Section styles */
+        section.features {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        section.features h2 {
+            color: #343a40;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Get Started Section styles */
+        section.get-started {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .get-started-btn {
+            background-color: #fff;
+            color: #007bff;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .get-started-btn:hover {
+            background-color: #f8f9fa;
+        }
+
+        /* Usage Section styles */
+        section.usage {
+            padding: 80px 0;
+        }
+
+        section.usage h2 {
+            color: #343a40;
+            margin-bottom: 40px;
+        }
+
+        .terminal-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .terminal-prompt {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .terminal-command {
+            color: #007bff;
+        }
+
+        .terminal-output {
+            color: #6c757d;
+        }
+
+        /* Additional Sections styles */
+        section.additional {
+            background-color: #fff;
+            padding: 80px 0;
+        }
+
+        section.additional h2 {
+            color: #343a40;
+            margin-bottom: 40px;
+        }
+
+        /* Copyright Section styles */
+        section.copyright {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        svg {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-lg font-semibold text-white padding 10px">COMPCon</a>
+            <div class="flex space-x-4">
+                <a href="#" class="text-white">Home</a>
+                <a href="#" class="text-white">Features</a>
+                <a href="#" class="text-white">Installation</a>
+                <a href="#" class="text-white">Usage</a>
+                <a href="./src/docs.html" class="text-white">Docs</a>
+                <a href="https://github.com/ApoorvaProgramming/COMPCon/" class="text-white">Github</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-extrabold mb-4">Welcome to COMPCon</h1>
+            <p class="text-lg">Streamlining tasks in a terminal environment like never before.</p>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-6">Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-3">Seamless Execution</h3>
+                    <p>Execute a variety of commands seamlessly with COMPCon.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-3">Auto-correction</h3>
+                    <p>Auto-correction for command inputs with minor typos.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="text-xl font-semibold mb-3">Modularity</h3>
+                    <p>Extend COMPCon's functionality through custom plugins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="get-started">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-6">Get Started</h2>
+            <p class="text-lg mb-6">Ready to enhance your terminal experience? Get started with COMPCon now!</p>
+            <a href="#" class="get-started-btn">Download Now</a>
+            <a href="#" class="get-started-btn">Documentation</a>
+        </div>
+    </section>
+
+
+    <!-- Usage Section -->
+    <section class="usage">
+      <div class="container mx-auto">
+          <h2 class="text-3xl font-semibold mb-6">Usage</h2>
+          <div class="terminal-container">
+              <div class="flex items-center justify-between mb-2">
+                  <span class="terminal-prompt">compcon&gt;</span>
+                  <button class="ml-auto bg-blue-500 text-blue px-4 py-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300" onclick="copyToClipboard()">Copy</button>
+              </div>
+              <pre class="terminal-output">$ compcon&gt; <span class="text-red-500">compcon1</span>
+Did you mean: <strong class="text-green-400">compcon</strong></pre>
+          </div>
+      </div>
+    </section>
+
+    <!-- Additional Section -->
+    <section class="additional">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-6">Additional Section</h2>
+            <!-- Add your content here -->
+        </div>
+    </section>
+
+    <!-- Copyright Section -->
+    <section class="copyright">
+        <div class="container mx-auto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="345" height="20" role="img" aria-label="License: © 2023 ApoorvaProgramming. All Rights Reserved.">
+                <rect width="75" height="20" rx="3" fill="#555"/>
+                <rect x="75" width="400" height="20" rx="3" fill="#9f9f9f"/>
+                <text x="20" y="15" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10">License</text>
+                <text x="80" y="15" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10">© 2023 ApoorvaProgramming. All Rights Reserved.</text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        function copyToClipboard() {
+            const textToCopy = document.querySelector('.terminal-output').innerText;
+            const tempInput = document.createElement('textarea');
+            tempInput.value = textToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="345" height="20" role="img" aria-label="License: © 2023 ApoorvaProgramming. All Rights Reserved.">
+    <rect width="75" height="20" rx="3" fill="#555"/>
+    <rect x="75" width="400" height="20" rx="3" fill="#9f9f9f"/>
+    <text x="20" y="15" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10">License</text>
+    <text x="80" y="15" fill="#fff" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10">© 2023 ApoorvaProgramming. All Rights Reserved.</text>
+</svg>

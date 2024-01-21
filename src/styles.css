@@ -1,0 +1,18 @@
+/* Import Bootstrap styles */
+@import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+/* Import Bulma styles */
+@import 'node_modules/bulma/css/bulma.min.css';
+
+/* Import Tailwind CSS styles */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/layouts';
+@import 'tailwindcss/theme';
+@import 'tailwindcss/typography';
+@import 'tailwindcss/forms';
+@import 'tailwindcss/breakpoints';
+@import 'tailwindcss/tailwind';
+
+/* Your custom styles go here */
